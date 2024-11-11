@@ -24,3 +24,50 @@ maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
 specificationVersion: '0.19'
+common:
+  - name: Quickstart
+    url: https://help.nightfall.ai/firewall-for-ai/introduction/quickstart
+    type: GettingStarted
+  - name: Use Cases
+    url: https://help.nightfall.ai/firewall-for-ai/introduction/use-cases
+    type: UseCases
+  - name: Authentication and Security
+    url: >-
+      https://help.nightfall.ai/firewall-for-ai/introduction/authentication-and-security
+    type: Authentication
+  - name: Pricing
+    url: https://help.nightfall.ai/firewall-for-ai/introduction/pricing
+    type: Pricing
+  - name: Errors
+    url: https://help.nightfall.ai/firewall-for-ai/key-concepts/errors
+    type: Errors
+  - name: Nightfall SDKs
+    url: >-
+      https://help.nightfall.ai/firewall-for-ai/nightfall-software-development-kit-sdk/nightfall-sdks
+    type: SDKs
+  - name: FAQs
+    url: https://help.nightfall.ai/firewall-for-ai/faqs
+    type: FAQ
+  - name: Sign In
+    url: >-
+      https://auth.nightfall.ai/login?state=hKFo2SBZVWhXZU50OHN6MkQ4aVRMcHgwMVVBQ3A4ZjYwYzVKcKFupWxvZ2luo3RpZNkgUXktZzBrbExsU0Z1SnozR2R2MWdKRE5fTElpV1dUb1CjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=r_2LyEabd0pmGjzB8Qc8Ne75dfNCCthB&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D
+    type: SignUp
+  - name: Terms
+    url: https://www.nightfall.ai/terms
+    type: TermsOfService
+  - name: Privacy
+    url: https://www.nightfall.ai/privacy
+    type: PrivacyPolicy
+  - name: Blog
+    url: https://www.nightfall.ai/blog
+    type: Blog
+  - name: Guides
+    url: https://www.nightfall.ai/guides
+    type: Guide
+  - name: Partners
+    url: https://www.nightfall.ai/partners
+    type: Partners
+  - name: Login
+    url: >-
+      https://auth.nightfall.ai/login?state=hKFo2SBMeEttUHRKV0ZlU2xNQlhOZzdCS2p6MVZ4VDhBRVJyT6FupWxvZ2luo3RpZNkgcndRclA2bXNZbWFIZV9Pa3pTNUFiSzdVYnotTW5ibGqjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=ZhCQ~Out2VDDBFN1hyjHNP7CDlD0XNM4&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D
+    type: Login
