@@ -18,8 +18,8 @@ image: >-
 created: '2024-07-02T00:00:00.000Z'
 modified: '2024-11-10'
 description: >-
-  One unified platform for protecting sensitive data across SaaS, GenAI, email,
-  and endpoints.
+  Nightfall builds AI models to protect sensitive data where todays end-users
+  work -- across Gen AI apps, SaaS, email, and devices.
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
