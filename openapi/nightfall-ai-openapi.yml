@@ -1,7 +1,9 @@
 openapi: 3.0.1
 info:
-  description: This API exposes detectors for sensitive data in arbitrary string payloads.
-  title: Methods
+  description: |-
+    One unified platform for protecting sensitive data across SaaS, GenAI,
+    email, and endpoints.
+  title: Nightfall AI
   version: 0.0.1
 servers:
   - url: https://api.nightfall.ai/
@@ -41,7 +43,8 @@ paths:
         - apiKeyAuth: []
       summary: Scan for sensitive information in your data
       tags:
-        - scan
+        - Scan
+        - Scans
       x-amazon-apigateway-integration:
         responses:
           default:
