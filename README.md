@@ -6,6 +6,9 @@ https://example.com/apis/the-ai-native-data-leak-prevention-platform-nightfall-a
 
 ## Scope
 
+- **Type:** Contract 
+- **Position:** Consuming 
+- **Access:** 3rd-Party 
 
 ## Tags:
 
@@ -14,18 +17,23 @@ https://example.com/apis/the-ai-native-data-leak-prevention-platform-nightfall-a
 ## Timestamps
 
 - **Created:** 2024-07-02 
-- **Modified:** 2024-11-16 
+- **Modified:** 2025-01-02 
 
 ## APIs
 
 ### Nightfall AI
-
-One unified platform for protecting sensitive data across SaaS, GenAI,
-email, and endpoints.
+One unified platform for protecting sensitive data across SaaS, GenAI, email, and endpoints.
 
 **Human URL:** [https://www.nightfall.ai/](https://www.nightfall.ai/)
 
 
+#### Tags:
+
+ - Scan, Artificial Intelligence
+
+#### Properties
+
+- [OpenAPI](properties/nightfall-ai-openapi.yml)
 
 ## Common Properties
 
