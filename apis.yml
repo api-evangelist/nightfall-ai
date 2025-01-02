@@ -7,7 +7,7 @@ apis:
     name: Nightfall AI
     tags:
       - Scan
-      - Scans
+      - Artificial Intelligence
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://www.nightfall.ai/
     properties:
