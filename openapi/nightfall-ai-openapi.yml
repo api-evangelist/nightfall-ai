@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  description: |-
+  description: >-
     One unified platform for protecting sensitive data across SaaS, GenAI,
     email, and endpoints.
   title: Nightfall AI
