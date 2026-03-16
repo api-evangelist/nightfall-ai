@@ -1,7 +1,6 @@
 aid: nightfall-ai
 url: >-
-
-  https://example.com/apis/the-ai-native-data-leak-prevention-platform-nightfall-ai.yml
+  https://raw.githubusercontent.com/api-evangelist/nightfall-ai/refs/heads/main/apis.yml
 apis:
   - aid: nightfall-ai:nightfall-ai
     name: Nightfall AI
@@ -124,7 +123,7 @@ common:
     name: Sign In
     type: Login
 created: '2024-07-02T00:00:00.000Z'
-modified: '2025-01-11'
+modified: '2026-03-16'
 position: Consuming
 description: >-
   Nightfall AI is a data security platform that specializes in identifying and
@@ -139,6 +138,6 @@ description: >-
   HIPAA. Overall, Nightfall AI offers a comprehensive solution for businesses
   looking to secure their data and maintain the trust of their customers.
 maintainers:
-  - FN: API Evangelist
-    email: info@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
 specificationVersion: '0.19'
