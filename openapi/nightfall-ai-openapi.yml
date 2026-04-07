@@ -821,3 +821,6 @@ x-amazon-apigateway-gateway-responses:
              "httpMethod": "$context.httpMethod",
              "statusCode": 404
         } 
+tags:
+  - name: Scan
+  - name: Scans

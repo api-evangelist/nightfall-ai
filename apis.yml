@@ -5,10 +5,9 @@ apis:
   - aid: nightfall-ai:nightfall-ai
     name: Nightfall AI
     tags:
-      - Scan
       - Artificial Intelligence
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Scan
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://www.nightfall.ai/
     properties:
       - url: properties/nightfall-ai-openapi.yml
@@ -18,9 +17,9 @@ apis:
       email, and endpoints.
 name: Nightfall AI
 tags:
-  - Sensitive Data
-  - Privacy
   - Artificial Intelligence
+  - Privacy
+  - Sensitive Data
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
