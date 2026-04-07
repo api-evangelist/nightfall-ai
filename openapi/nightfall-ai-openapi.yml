@@ -41,7 +41,7 @@ paths:
               style: simple
       security:
         - apiKeyAuth: []
-      summary: Scan for sensitive information in your data
+      summary: Nightfall AI Scan for sensitive information in your data
       tags:
         - Scan
         - Scans
