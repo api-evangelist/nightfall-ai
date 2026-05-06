@@ -1,0 +1,69 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Nightfall AI
+  description: One unified platform for protecting sensitive data across SaaS, GenAI, email, and endpoints.
+  tags:
+  - Nightfall
+  - Ai
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: nightfall-ai
+    baseUri: https://api.nightfall.ai
+    description: Nightfall AI HTTP API.
+    authentication:
+      type: apikey
+      in: header
+      name: x-api-key
+      value: '{{NIGHTFALL_AI_TOKEN}}'
+    resources:
+    - name: v2-scan
+      path: /v2/scan
+      operations:
+      - name: scanpayloadv2
+        method: POST
+        description: Nightfall AI Scan for sensitive information in your data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: nightfall-ai-rest
+    description: REST adapter for Nightfall AI.
+    resources:
+    - path: /v2/scan
+      name: scanpayloadv2
+      operations:
+      - method: POST
+        name: scanpayloadv2
+        description: Nightfall AI Scan for sensitive information in your data
+        call: nightfall-ai.scanpayloadv2
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: nightfall-ai-mcp
+    transport: http
+    description: MCP adapter for Nightfall AI for AI agent use.
+    tools:
+    - name: scanpayloadv2
+      description: Nightfall AI Scan for sensitive information in your data
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: nightfall-ai.scanpayloadv2
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    NIGHTFALL_AI_TOKEN: NIGHTFALL_AI_TOKEN
