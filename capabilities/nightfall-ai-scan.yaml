@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Nightfall AI — Scan
+  description: 'Nightfall AI — Scan. 1 operations. Lead operation: Nightfall AI Scan for sensitive information in your data.
+    Self-contained Naftiko capability covering one Nightfall Ai business surface.'
+  tags:
+  - Nightfall Ai
+  - Scan
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    NIGHTFALL_AI_API_KEY: NIGHTFALL_AI_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: nightfall-ai-scan
+    baseUri: https://api.nightfall.ai
+    description: Nightfall AI — Scan business capability. Self-contained, no shared references.
+    resources:
+    - name: v2-scan
+      path: /v2/scan
+      operations:
+      - name: scanpayloadv2
+        method: POST
+        description: Nightfall AI Scan for sensitive information in your data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: x-api-key
+      value: '{{env.NIGHTFALL_AI_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: nightfall-ai-scan-rest
+    port: 8080
+    description: REST adapter for Nightfall AI — Scan. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/v2/scan
+      name: v2-scan
+      description: REST surface for v2-scan.
+      operations:
+      - method: POST
+        name: scanpayloadv2
+        description: Nightfall AI Scan for sensitive information in your data
+        call: nightfall-ai-scan.scanpayloadv2
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: nightfall-ai-scan-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Nightfall AI — Scan. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: nightfall-ai-scan-sensitive-information
+      description: Nightfall AI Scan for sensitive information in your data
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: nightfall-ai-scan.scanpayloadv2
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
