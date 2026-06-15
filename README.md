@@ -1,71 +1,78 @@
 # Nightfall AI (nightfall-ai)
-Nightfall AI is a data security platform that specializes in identifying and protecting sensitive information within an organization. By utilizing machine learning technology, Nightfall AI can automatically scan files, emails, and messages to detect and classify sensitive data such as credit card numbers, social security numbers, and personal addresses. Once identified, Nightfall AI can enforce policies to encrypt, redact, or delete this information to prevent unauthorized access or data breaches. Additionally, Nightfall AI provides real-time monitoring and alerts to help organizations stay ahead of potential security threats and maintain compliance with regulations such as GDPR and HIPAA. Overall, Nightfall AI offers a comprehensive solution for businesses looking to secure their data and maintain the trust of their customers.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/nightfall-ai/refs/heads/main/apis.yml)
+Nightfall AI is a data security platform that specializes in identifying and protecting sensitive information within an organization. By utilizing machine learning technology, Nightfall AI can automatically scan files, emails, and messages to detect and classify sensitive data such as credit card numbers, social security numbers, and personal addresses.
+
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/nightfall-ai/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/nightfall-ai/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Position:** Consuming
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Sensitive Data, Privacy, Artificial Intelligence
+- Artificial Intelligence
+- Privacy
+- Sensitive Data
 
 ## Timestamps
 
-- **Created:** 2024-07-02 
-- **Modified:** 2026-04-28 
+- **Created:** 2024-07-02T00:00:00.000Z
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### Nightfall AI
+
 One unified platform for protecting sensitive data across SaaS, GenAI, email, and endpoints.
 
-**Human URL:** [https://www.nightfall.ai/](https://www.nightfall.ai/)
+- **Human URL:** [https://www.nightfall.ai/](https://www.nightfall.ai/)
 
+#### Tags
 
-#### Tags:
-
- - Scan, Artificial Intelligence
+- Artificial Intelligence
+- Scan
 
 #### Properties
 
-- [OpenAPI](openapi/nightfall-ai-openapi.yml)
+- [OpenAPI](openapi/nightfall-ai-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/nightfall-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/nightfall-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
-- [GettingStarted](https://help.nightfall.ai/firewall-for-ai/introduction/quickstart)
-- [UseCases](https://help.nightfall.ai/firewall-for-ai/introduction/use-cases)
+- [GitHub Organization](https://github.com/nightfallai)
+- [LinkedIn](https://www.linkedin.com/company/nightfall-ai)
+- [Getting Started](https://help.nightfall.ai/firewall-for-ai/introduction/quickstart)
+- [Use Cases](https://help.nightfall.ai/firewall-for-ai/introduction/use-cases)
 - [Authentication](
 https://help.nightfall.ai/firewall-for-ai/introduction/authentication-and-security)
 - [Pricing](https://help.nightfall.ai/firewall-for-ai/introduction/pricing)
 - [Errors](https://help.nightfall.ai/firewall-for-ai/key-concepts/errors)
-- [SDKs](
+- [S D Ks](
 https://help.nightfall.ai/firewall-for-ai/nightfall-software-development-kit-sdk/nightfall-sdks)
-- [FAQ](https://help.nightfall.ai/firewall-for-ai/faqs)
-- [SignUp](
+- [F A Q](https://help.nightfall.ai/firewall-for-ai/faqs)
+- [Sign Up](
 https://auth.nightfall.ai/login?state=hKFo2SBZVWhXZU50OHN6MkQ4aVRMcHgwMVVBQ3A4ZjYwYzVKcKFupWxvZ2luo3RpZNkgUXktZzBrbExsU0Z1SnozR2R2MWdKRE5fTElpV1dUb1CjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=r_2LyEabd0pmGjzB8Qc8Ne75dfNCCthB&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D)
-- [TermsOfService](https://www.nightfall.ai/terms)
-- [PrivacyPolicy](https://www.nightfall.ai/privacy)
+- [Terms of Service](https://www.nightfall.ai/terms)
+- [Privacy Policy](https://www.nightfall.ai/privacy)
 - [Blog](https://www.nightfall.ai/blog)
 - [Guide](https://www.nightfall.ai/guides)
 - [Partners](https://www.nightfall.ai/partners)
 - [Login](https://auth.nightfall.ai/login)
-- [GettingStarted](https://help.nightfall.ai/firewall-for-ai/introduction/quickstart)
-- [UseCases](https://help.nightfall.ai/firewall-for-ai/introduction/use-cases)
+- [Getting Started](https://help.nightfall.ai/firewall-for-ai/introduction/quickstart)
+- [Use Cases](https://help.nightfall.ai/firewall-for-ai/introduction/use-cases)
 - [Authentication](
 https://help.nightfall.ai/firewall-for-ai/introduction/authentication-and-security)
 - [Pricing](https://help.nightfall.ai/firewall-for-ai/introduction/pricing)
 - [Errors](https://help.nightfall.ai/firewall-for-ai/key-concepts/errors)
-- [SDKs](
+- [S D Ks](
 https://help.nightfall.ai/firewall-for-ai/nightfall-software-development-kit-sdk/nightfall-sdks)
-- [FAQ](https://help.nightfall.ai/firewall-for-ai/faqs)
-- [SignUp](
+- [F A Q](https://help.nightfall.ai/firewall-for-ai/faqs)
+- [Sign Up](
 https://auth.nightfall.ai/login?state=hKFo2SBZVWhXZU50OHN6MkQ4aVRMcHgwMVVBQ3A4ZjYwYzVKcKFupWxvZ2luo3RpZNkgUXktZzBrbExsU0Z1SnozR2R2MWdKRE5fTElpV1dUb1CjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=r_2LyEabd0pmGjzB8Qc8Ne75dfNCCthB&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D)
-- [TermsOfService](https://www.nightfall.ai/terms)
-- [PrivacyPolicy](https://www.nightfall.ai/privacy)
+- [Terms of Service](https://www.nightfall.ai/terms)
+- [Privacy Policy](https://www.nightfall.ai/privacy)
 - [Blog](https://www.nightfall.ai/blog)
 - [Guide](https://www.nightfall.ai/guides)
 - [Partners](https://www.nightfall.ai/partners)
@@ -74,7 +81,5 @@ https://auth.nightfall.ai/login?state=hKFo2SBMeEttUHRKV0ZlU2xNQlhOZzdCS2p6MVZ4VD
 
 ## Maintainers
 
-**FN:** API Evangelist
-
-**Email:** info@apievangelist.com
-
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
