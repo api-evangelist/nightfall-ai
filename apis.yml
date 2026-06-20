@@ -6,7 +6,7 @@ apis:
     tags:
       - Artificial Intelligence
       - Scan
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.nightfall.ai/
     properties:
       - url: openapi/nightfall-ai-openapi.yml
@@ -18,7 +18,7 @@ tags:
   - Privacy
   - Sensitive Data
 kind: contract
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
   - type: GitHubOrganization
