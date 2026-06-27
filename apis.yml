@@ -41,7 +41,7 @@ common:
     type: Pricing
   - url: https://help.nightfall.ai/firewall-for-ai/key-concepts/errors
     name: Errors
-    type: Errors
+    type: ErrorCodes
   - url: |-
 
       https://help.nightfall.ai/firewall-for-ai/nightfall-software-development-kit-sdk/nightfall-sdks
@@ -54,7 +54,7 @@ common:
 
       https://auth.nightfall.ai/login?state=hKFo2SBZVWhXZU50OHN6MkQ4aVRMcHgwMVVBQ3A4ZjYwYzVKcKFupWxvZ2luo3RpZNkgUXktZzBrbExsU0Z1SnozR2R2MWdKRE5fTElpV1dUb1CjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=r_2LyEabd0pmGjzB8Qc8Ne75dfNCCthB&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D
     name: Sign In
-    type: SignUp
+    type: Signup
   - url: https://www.nightfall.ai/terms
     name: Terms
     type: TermsOfService
@@ -89,7 +89,7 @@ common:
     type: Pricing
   - url: https://help.nightfall.ai/firewall-for-ai/key-concepts/errors
     name: Errors | Firewall for AI
-    type: Errors
+    type: ErrorCodes
   - url: |-
 
       https://help.nightfall.ai/firewall-for-ai/nightfall-software-development-kit-sdk/nightfall-sdks
@@ -102,7 +102,7 @@ common:
 
       https://auth.nightfall.ai/login?state=hKFo2SBZVWhXZU50OHN6MkQ4aVRMcHgwMVVBQ3A4ZjYwYzVKcKFupWxvZ2luo3RpZNkgUXktZzBrbExsU0Z1SnozR2R2MWdKRE5fTElpV1dUb1CjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=r_2LyEabd0pmGjzB8Qc8Ne75dfNCCthB&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D
     name: Sign In
-    type: SignUp
+    type: Signup
   - url: https://www.nightfall.ai/terms
     name: Terms | Nightfall AI
     type: TermsOfService
