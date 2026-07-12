@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://www.nightfall.ai/security
+url: https://www.nightfall.ai/security
+certifications:
+- SOC 2
+- HIPAA
+evidence:
+- source: https://www.nightfall.ai/security
+  keywords:
+  - soc 2
+  - hipaa
+  - trust center

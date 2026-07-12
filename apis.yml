@@ -21,6 +21,14 @@ kind: contract
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+  - type: TrustCenter
+    url: security/nightfall-ai-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/nightfall-ai-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/nightfall-ai-domain-security.yml
+  - type: Authentication
+    url: authentication/nightfall-ai-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/nightfallai
   - type: LinkedIn
