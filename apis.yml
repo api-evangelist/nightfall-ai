@@ -1,24 +1,44 @@
 aid: nightfall-ai
 url: https://raw.githubusercontent.com/api-evangelist/nightfall-ai/refs/heads/main/apis.yml
 apis:
-  - aid: nightfall-ai:nightfall-ai
-    name: Nightfall AI
-    tags:
-      - Artificial Intelligence
-      - Scan
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.nightfall.ai/
-    properties:
-      - url: openapi/nightfall-ai-openapi.yml
-        type: OpenAPI
-    description: One unified platform for protecting sensitive data across SaaS, GenAI, email, and endpoints.
+- aid: nightfall-ai:nightfall-ai-scan-api
+  name: Nightfall AI Scan API
+  description: The Scan API from Nightfall AI — 1 operation(s) for scan.
+  humanURL: https://www.nightfall.ai/
+  tags:
+  - Scan
+  properties:
+  - type: OpenAPI
+    url: openapi/nightfall-ai-scan-api-openapi.yml
+- aid: nightfall-ai:nightfall-ai-scans-api
+  name: Nightfall AI Scans API
+  description: The Scans API from Nightfall AI — 1 operation(s) for scans.
+  humanURL: https://www.nightfall.ai/
+  tags:
+  - Scans
+  properties:
+  - type: OpenAPI
+    url: openapi/nightfall-ai-scans-api-openapi.yml
 name: Nightfall AI
 tags:
   - Artificial Intelligence
   - Privacy
   - Sensitive Data
 kind: contract
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nightfall-ai.png
 access: 3rd-Party
 common:
   - type: AgenticAccess
