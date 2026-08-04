@@ -1,0 +1,16 @@
+{
+  "provider": "nightfall-ai",
+  "sources": [
+    "nightfall-ai-scan-api-openapi.yml",
+    "nightfall-ai-scans-api-openapi.yml"
+  ],
+  "outputs": [
+    "nightfall-ai-scan-api-openapi.yml",
+    "nightfall-ai-scans-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
