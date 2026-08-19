@@ -1,0 +1,166 @@
+{
+  "item": [
+    {
+      "id": "2898a339-e2c8-4012-9b6a-a2c9bfba7f16",
+      "name": "Scans",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2faf9569-9e6c-4f4c-ba1d-307867251ffd",
+          "name": "Nightfall AI Scan for sensitive information in your data",
+          "request": {
+            "name": "Nightfall AI Scan for sensitive information in your data",
+            "description": {
+              "content": "Provide a list of arbitrary string data, and scan each item with the provided detectors to uncover sensitive information. Returns a list equal in size to the number of provided string payloads. The item at each list index will be a list of all matches for the provided detectors, or an empty list if no occurrences are found.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "scan"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "x-api-key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"config\": {\n    \"conditionSetUUID\": \"<string>\",\n    \"conditionSet\": {\n      \"logicalOp\": \"<string>\",\n      \"conditions\": [\n        {\n          \"minNumFindings\": \"<integer>\",\n          \"minConfidence\": \"<string>\",\n          \"detector\": {\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"detectorType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"nightfallDetector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wordList\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"contextRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exclusionRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"minNumFindings\": \"<integer>\",\n          \"minConfidence\": \"<string>\",\n          \"detector\": {\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"detectorType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"nightfallDetector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wordList\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"contextRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exclusionRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ]\n    }\n  },\n  \"payload\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "577370f1-5be5-41dc-a230-f2a79b57e4ff",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "scan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"payload\": [\n    \"payload\",\n    \"payload\"\n  ],\n  \"config\": {\n    \"conditionSet\": {\n      \"logicalOp\": \"logicalOp\",\n      \"conditions\": [\n        {\n          \"minNumFindings\": 0,\n          \"detector\": {\n            \"regex\": {\n              \"isCaseSensitive\": true,\n              \"pattern\": \"pattern\"\n            },\n            \"contextRules\": [\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"proximity\": {\n                  \"windowAfter\": 1,\n                  \"windowBefore\": 6\n                },\n                \"confidenceAdjustment\": {}\n              },\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"proximity\": {\n                  \"windowAfter\": 1,\n                  \"windowBefore\": 6\n                },\n                \"confidenceAdjustment\": {}\n              }\n            ],\n            \"wordList\": {\n              \"isCaseSensitive\": true,\n              \"values\": [\n                \"values\",\n                \"values\"\n              ]\n            },\n            \"displayName\": \"displayName\",\n            \"exclusionRules\": [\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"wordList\": {\n                  \"isCaseSensitive\": true,\n                  \"values\": [\n                    \"values\",\n                    \"values\"\n                  ]\n                }\n              },\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"wordList\": {\n                  \"isCaseSensitive\": true,\n                  \"values\": [\n                    \"values\",\n                    \"values\"\n                  ]\n                }\n              }\n            ]\n          }\n        },\n        {\n          \"minNumFindings\": 0,\n          \"detector\": {\n            \"regex\": {\n              \"isCaseSensitive\": true,\n              \"pattern\": \"pattern\"\n            },\n            \"contextRules\": [\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"proximity\": {\n                  \"windowAfter\": 1,\n                  \"windowBefore\": 6\n                },\n                \"confidenceAdjustment\": {}\n              },\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"proximity\": {\n                  \"windowAfter\": 1,\n                  \"windowBefore\": 6\n                },\n                \"confidenceAdjustment\": {}\n              }\n            ],\n            \"wordList\": {\n              \"isCaseSensitive\": true,\n              \"values\": [\n                \"values\",\n                \"values\"\n              ]\n            },\n            \"displayName\": \"displayName\",\n            \"exclusionRules\": [\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"wordList\": {\n                  \"isCaseSensitive\": true,\n                  \"values\": [\n                    \"values\",\n                    \"values\"\n                  ]\n                }\n              },\n              {\n                \"regex\": {\n                  \"isCaseSensitive\": true,\n                  \"pattern\": \"pattern\"\n                },\n                \"wordList\": {\n                  \"isCaseSensitive\": true,\n                  \"values\": [\n                    \"values\",\n                    \"values\"\n                  ]\n                }\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"conditionSetUUID\": \"conditionSetUUID\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  [\n    {\n      \"fragment\": \"string\",\n      \"detectorName\": \"string\",\n      \"confidence\": \"<string>\",\n      \"location\": {\n        \"byteRange\": {\n          \"start\": 7351,\n          \"end\": 6601\n        },\n        \"unicodeRange\": {\n          \"start\": 3795,\n          \"end\": 9193\n        }\n      }\n    },\n    {\n      \"fragment\": \"string\",\n      \"detectorName\": \"string\",\n      \"confidence\": \"<string>\",\n      \"location\": {\n        \"byteRange\": {\n          \"start\": 5247,\n          \"end\": 8558\n        },\n        \"unicodeRange\": {\n          \"start\": 4733,\n          \"end\": 3767\n        }\n      }\n    }\n  ],\n  [\n    {\n      \"fragment\": \"string\",\n      \"detectorName\": \"string\",\n      \"confidence\": \"<string>\",\n      \"location\": {\n        \"byteRange\": {\n          \"start\": 977,\n          \"end\": 187\n        },\n        \"unicodeRange\": {\n          \"start\": 8106,\n          \"end\": 917\n        }\n      }\n    },\n    {\n      \"fragment\": \"string\",\n      \"detectorName\": \"string\",\n      \"confidence\": \"<string>\",\n      \"location\": {\n        \"byteRange\": {\n          \"start\": 5862,\n          \"end\": 316\n        },\n        \"unicodeRange\": {\n          \"start\": 1442,\n          \"end\": 5368\n        }\n      }\n    }\n  ]\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nightfall.ai/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5ecdf974-bc25-4634-8c09-babab6aabfff",
+    "name": "Nightfall AI Scan Scans API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "One unified platform for protecting sensitive data across SaaS, GenAI, email, and endpoints.",
+      "type": "text/plain"
+    }
+  }
+}
