@@ -6,6 +6,8 @@ apis:
   description: The Scan API from Nightfall AI — 1 operation(s) for scan.
   humanURL: https://www.nightfall.ai/
   tags:
+  - Scans
+  tags_raw:
   - Scan
   properties:
   - type: OpenAPI
