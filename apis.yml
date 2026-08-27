@@ -12,15 +12,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/nightfall-ai-scan-api-openapi.yml
-- aid: nightfall-ai:nightfall-ai-scans-api
-  name: Nightfall AI Scans API
-  description: The Scans API from Nightfall AI — 1 operation(s) for scans.
-  humanURL: https://www.nightfall.ai/
-  tags:
-  - Scans
-  properties:
-  - type: OpenAPI
-    url: openapi/nightfall-ai-scans-api-openapi.yml
 name: Nightfall AI
 tags:
   - Artificial Intelligence
