@@ -52,118 +52,106 @@ paths:
       x-codegen-request-body-name: ScanReqV2
 components:
   schemas:
-    ExclusionType:
-      description: The type of exclusion rule.
-      enum:
-      - REGEX
-      - WORD_LIST
-      type: string
-    ScanRequestV2_config:
-      description: Config can contain either a conditionSetUUID or a list of inline conditions to scan the request payload with.
+    ScanRequestV2_config_conditionSet:
+      description: A conditionSet contains a list of conditions with which you wish to scan the request payload.
       example:
-        conditionSet:
-          logicalOp: logicalOp
-          conditions:
-          - minNumFindings: 0
-            detector:
-              regex:
+        logicalOp: logicalOp
+        conditions:
+        - minNumFindings: 0
+          detector:
+            regex:
+              isCaseSensitive: true
+              pattern: pattern
+            contextRules:
+            - regex:
                 isCaseSensitive: true
                 pattern: pattern
-              contextRules:
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                proximity:
-                  windowAfter: 1
-                  windowBefore: 6
-                confidenceAdjustment: {}
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                proximity:
-                  windowAfter: 1
-                  windowBefore: 6
-                confidenceAdjustment: {}
+              proximity:
+                windowAfter: 1
+                windowBefore: 6
+              confidenceAdjustment: {}
+            - regex:
+                isCaseSensitive: true
+                pattern: pattern
+              proximity:
+                windowAfter: 1
+                windowBefore: 6
+              confidenceAdjustment: {}
+            wordList:
+              isCaseSensitive: true
+              values:
+              - values
+              - values
+            displayName: displayName
+            exclusionRules:
+            - regex:
+                isCaseSensitive: true
+                pattern: pattern
               wordList:
                 isCaseSensitive: true
                 values:
                 - values
                 - values
-              displayName: displayName
-              exclusionRules:
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                wordList:
-                  isCaseSensitive: true
-                  values:
-                  - values
-                  - values
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                wordList:
-                  isCaseSensitive: true
-                  values:
-                  - values
-                  - values
-          - minNumFindings: 0
-            detector:
-              regex:
+            - regex:
                 isCaseSensitive: true
                 pattern: pattern
-              contextRules:
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                proximity:
-                  windowAfter: 1
-                  windowBefore: 6
-                confidenceAdjustment: {}
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                proximity:
-                  windowAfter: 1
-                  windowBefore: 6
-                confidenceAdjustment: {}
               wordList:
                 isCaseSensitive: true
                 values:
                 - values
                 - values
-              displayName: displayName
-              exclusionRules:
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                wordList:
-                  isCaseSensitive: true
-                  values:
-                  - values
-                  - values
-              - regex:
-                  isCaseSensitive: true
-                  pattern: pattern
-                wordList:
-                  isCaseSensitive: true
-                  values:
-                  - values
-                  - values
-        conditionSetUUID: conditionSetUUID
+        - minNumFindings: 0
+          detector:
+            regex:
+              isCaseSensitive: true
+              pattern: pattern
+            contextRules:
+            - regex:
+                isCaseSensitive: true
+                pattern: pattern
+              proximity:
+                windowAfter: 1
+                windowBefore: 6
+              confidenceAdjustment: {}
+            - regex:
+                isCaseSensitive: true
+                pattern: pattern
+              proximity:
+                windowAfter: 1
+                windowBefore: 6
+              confidenceAdjustment: {}
+            wordList:
+              isCaseSensitive: true
+              values:
+              - values
+              - values
+            displayName: displayName
+            exclusionRules:
+            - regex:
+                isCaseSensitive: true
+                pattern: pattern
+              wordList:
+                isCaseSensitive: true
+                values:
+                - values
+                - values
+            - regex:
+                isCaseSensitive: true
+                pattern: pattern
+              wordList:
+                isCaseSensitive: true
+                values:
+                - values
+                - values
       properties:
-        conditionSetUUID:
-          description: The UUID corresponding to the condition set with which you wish to scan the request payload.
+        logicalOp:
+          description: Evaluate whether the conditions satisfy ANY or ALL criteria. Empty value defaults to ANY.
           type: string
-        conditionSet:
-          $ref: '#/components/schemas/ScanRequestV2_config_conditionSet'
-      type: object
-    ContextRule_confidenceAdjustment:
-      description: The object containing the confidence level to adjust findings to.
-      example: {}
-      properties:
-        fixedConfidence:
-          $ref: '#/components/schemas/Confidence'
+        conditions:
+          description: A list of conditions.
+          items:
+            $ref: '#/components/schemas/Condition'
+          type: array
       type: object
     DetectorType:
       description: The type of detector.
@@ -185,22 +173,14 @@ components:
           description: The number of trailing characters to include as context after the finding itself.
           type: integer
       type: object
-    WordList:
-      description: The WordList object for wordList detector and exclusion rules.
-      example:
-        isCaseSensitive: true
-        values:
-        - values
-        - values
+    ScanResponse_location_byteRange:
       properties:
-        values:
-          description: A list of words for wordList.
-          items:
-            type: string
-          type: array
-        isCaseSensitive:
-          description: The case sensitivity for words in the wordList. If false, ignore the case of findings.
-          type: boolean
+        start:
+          description: The index of the fragment's starting byte.
+          type: integer
+        end:
+          description: The index of the fragment's ending byte.
+          type: integer
       type: object
     ScanRequestV2:
       description: The request body of the /v2/scan endpoint
@@ -309,59 +289,16 @@ components:
             type: string
           type: array
       type: object
-    ScanResponseV2:
-      properties:
-        fragment:
-          description: The text sample that was flagged.
-          type: string
-        detectorName:
-          description: The data type flagged in the text fragment.
-          type: string
-        confidence:
-          $ref: '#/components/schemas/Confidence'
-        location:
-          $ref: '#/components/schemas/ScanResponse_location'
-      type: object
+    ScanResponseV2Array:
+      items:
+        $ref: '#/components/schemas/EachItemV2Array'
+      type: array
     ScanResponse_location:
       properties:
         byteRange:
           $ref: '#/components/schemas/ScanResponse_location_byteRange'
         unicodeRange:
           $ref: '#/components/schemas/ScanResponse_location_unicodeRange'
-      type: object
-    EachItemV2Array:
-      items:
-        $ref: '#/components/schemas/ScanResponseV2'
-      type: array
-    ScanResponse_location_unicodeRange:
-      properties:
-        start:
-          description: The index of the fragment's starting unicode character.
-          type: integer
-        end:
-          description: The index of the fragment's ending unicode character.
-          type: integer
-      type: object
-    ExclusionRule:
-      description: An exclusion rule removes findings that match the rule's given exlusion.
-      example:
-        regex:
-          isCaseSensitive: true
-          pattern: pattern
-        wordList:
-          isCaseSensitive: true
-          values:
-          - values
-          - values
-      properties:
-        matchType:
-          $ref: '#/components/schemas/MatchType'
-        exclusionType:
-          $ref: '#/components/schemas/ExclusionType'
-        regex:
-          $ref: '#/components/schemas/Regex'
-        wordList:
-          $ref: '#/components/schemas/WordList'
       type: object
     Regex:
       description: The regex object for the regex detector, context rules, and exclusion rules.
@@ -376,65 +313,6 @@ components:
           description: The case sensitivity for the regex pattern.
           type: boolean
       type: object
-    Condition:
-      description: An inclusion condition within a condition set.
-      example:
-        minNumFindings: 0
-        detector:
-          regex:
-            isCaseSensitive: true
-            pattern: pattern
-          contextRules:
-          - regex:
-              isCaseSensitive: true
-              pattern: pattern
-            proximity:
-              windowAfter: 1
-              windowBefore: 6
-            confidenceAdjustment: {}
-          - regex:
-              isCaseSensitive: true
-              pattern: pattern
-            proximity:
-              windowAfter: 1
-              windowBefore: 6
-            confidenceAdjustment: {}
-          wordList:
-            isCaseSensitive: true
-            values:
-            - values
-            - values
-          displayName: displayName
-          exclusionRules:
-          - regex:
-              isCaseSensitive: true
-              pattern: pattern
-            wordList:
-              isCaseSensitive: true
-              values:
-              - values
-              - values
-          - regex:
-              isCaseSensitive: true
-              pattern: pattern
-            wordList:
-              isCaseSensitive: true
-              values:
-              - values
-              - values
-      properties:
-        minNumFindings:
-          description: The minimum number of findings required in order for this detector to be reported.
-          type: integer
-        minConfidence:
-          $ref: '#/components/schemas/Confidence'
-        detector:
-          $ref: '#/components/schemas/Detector'
-      type: object
-    ScanResponseV2Array:
-      items:
-        $ref: '#/components/schemas/EachItemV2Array'
-      type: array
     Detector:
       example:
         regex:
@@ -501,140 +379,104 @@ components:
             $ref: '#/components/schemas/ExclusionRule'
           type: array
       type: object
-    ContextRule:
-      description: A context rule adjusts the finding confidence based on surrounding context.
-      example:
-        regex:
-          isCaseSensitive: true
-          pattern: pattern
-        proximity:
-          windowAfter: 1
-          windowBefore: 6
-        confidenceAdjustment: {}
-      properties:
-        regex:
-          $ref: '#/components/schemas/Regex'
-        proximity:
-          $ref: '#/components/schemas/ContextRule_proximity'
-        confidenceAdjustment:
-          $ref: '#/components/schemas/ContextRule_confidenceAdjustment'
-      type: object
-    ScanRequestV2_config_conditionSet:
-      description: A conditionSet contains a list of conditions with which you wish to scan the request payload.
-      example:
-        logicalOp: logicalOp
-        conditions:
-        - minNumFindings: 0
-          detector:
-            regex:
-              isCaseSensitive: true
-              pattern: pattern
-            contextRules:
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              proximity:
-                windowAfter: 1
-                windowBefore: 6
-              confidenceAdjustment: {}
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              proximity:
-                windowAfter: 1
-                windowBefore: 6
-              confidenceAdjustment: {}
-            wordList:
-              isCaseSensitive: true
-              values:
-              - values
-              - values
-            displayName: displayName
-            exclusionRules:
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              wordList:
-                isCaseSensitive: true
-                values:
-                - values
-                - values
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              wordList:
-                isCaseSensitive: true
-                values:
-                - values
-                - values
-        - minNumFindings: 0
-          detector:
-            regex:
-              isCaseSensitive: true
-              pattern: pattern
-            contextRules:
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              proximity:
-                windowAfter: 1
-                windowBefore: 6
-              confidenceAdjustment: {}
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              proximity:
-                windowAfter: 1
-                windowBefore: 6
-              confidenceAdjustment: {}
-            wordList:
-              isCaseSensitive: true
-              values:
-              - values
-              - values
-            displayName: displayName
-            exclusionRules:
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              wordList:
-                isCaseSensitive: true
-                values:
-                - values
-                - values
-            - regex:
-                isCaseSensitive: true
-                pattern: pattern
-              wordList:
-                isCaseSensitive: true
-                values:
-                - values
-                - values
-      properties:
-        logicalOp:
-          description: Evaluate whether the conditions satisfy ANY or ALL criteria. Empty value defaults to ANY.
-          type: string
-        conditions:
-          description: A list of conditions.
-          items:
-            $ref: '#/components/schemas/Condition'
-          type: array
-      type: object
-    ScanResponse_location_byteRange:
-      properties:
-        start:
-          description: The index of the fragment's starting byte.
-          type: integer
-        end:
-          description: The index of the fragment's ending byte.
-          type: integer
-      type: object
     MatchType:
       description: The type of match for a pattern.
       enum:
       - PARTIAL
       - FULL
       type: string
+    ScanResponse_location_unicodeRange:
+      properties:
+        start:
+          description: The index of the fragment's starting unicode character.
+          type: integer
+        end:
+          description: The index of the fragment's ending unicode character.
+          type: integer
+      type: object
+    ContextRule_confidenceAdjustment:
+      description: The object containing the confidence level to adjust findings to.
+      example: {}
+      properties:
+        fixedConfidence:
+          $ref: '#/components/schemas/Confidence'
+      type: object
+    WordList:
+      description: The WordList object for wordList detector and exclusion rules.
+      example:
+        isCaseSensitive: true
+        values:
+        - values
+        - values
+      properties:
+        values:
+          description: A list of words for wordList.
+          items:
+            type: string
+          type: array
+        isCaseSensitive:
+          description: The case sensitivity for words in the wordList. If false, ignore the case of findings.
+          type: boolean
+      type: object
+    Condition:
+      description: An inclusion condition within a condition set.
+      example:
+        minNumFindings: 0
+        detector:
+          regex:
+            isCaseSensitive: true
+            pattern: pattern
+          contextRules:
+          - regex:
+              isCaseSensitive: true
+              pattern: pattern
+            proximity:
+              windowAfter: 1
+              windowBefore: 6
+            confidenceAdjustment: {}
+          - regex:
+              isCaseSensitive: true
+              pattern: pattern
+            proximity:
+              windowAfter: 1
+              windowBefore: 6
+            confidenceAdjustment: {}
+          wordList:
+            isCaseSensitive: true
+            values:
+            - values
+            - values
+          displayName: displayName
+          exclusionRules:
+          - regex:
+              isCaseSensitive: true
+              pattern: pattern
+            wordList:
+              isCaseSensitive: true
+              values:
+              - values
+              - values
+          - regex:
+              isCaseSensitive: true
+              pattern: pattern
+            wordList:
+              isCaseSensitive: true
+              values:
+              - values
+              - values
+      properties:
+        minNumFindings:
+          description: The minimum number of findings required in order for this detector to be reported.
+          type: integer
+        minConfidence:
+          $ref: '#/components/schemas/Confidence'
+        detector:
+          $ref: '#/components/schemas/Detector'
+      type: object
+    EachItemV2Array:
+      items:
+        $ref: '#/components/schemas/ScanResponseV2'
+      type: array
     NightfallDetectorType:
       description: The name for a Nightfall detector.
       enum:
@@ -699,6 +541,112 @@ components:
       - US_SOCIAL_SECURITY_NUMBER
       - US_VEHICLE_IDENTIFICATION_NUMBER
       type: string
+    ExclusionType:
+      description: The type of exclusion rule.
+      enum:
+      - REGEX
+      - WORD_LIST
+      type: string
+    ScanRequestV2_config:
+      description: Config can contain either a conditionSetUUID or a list of inline conditions to scan the request payload with.
+      example:
+        conditionSet:
+          logicalOp: logicalOp
+          conditions:
+          - minNumFindings: 0
+            detector:
+              regex:
+                isCaseSensitive: true
+                pattern: pattern
+              contextRules:
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                proximity:
+                  windowAfter: 1
+                  windowBefore: 6
+                confidenceAdjustment: {}
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                proximity:
+                  windowAfter: 1
+                  windowBefore: 6
+                confidenceAdjustment: {}
+              wordList:
+                isCaseSensitive: true
+                values:
+                - values
+                - values
+              displayName: displayName
+              exclusionRules:
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                wordList:
+                  isCaseSensitive: true
+                  values:
+                  - values
+                  - values
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                wordList:
+                  isCaseSensitive: true
+                  values:
+                  - values
+                  - values
+          - minNumFindings: 0
+            detector:
+              regex:
+                isCaseSensitive: true
+                pattern: pattern
+              contextRules:
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                proximity:
+                  windowAfter: 1
+                  windowBefore: 6
+                confidenceAdjustment: {}
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                proximity:
+                  windowAfter: 1
+                  windowBefore: 6
+                confidenceAdjustment: {}
+              wordList:
+                isCaseSensitive: true
+                values:
+                - values
+                - values
+              displayName: displayName
+              exclusionRules:
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                wordList:
+                  isCaseSensitive: true
+                  values:
+                  - values
+                  - values
+              - regex:
+                  isCaseSensitive: true
+                  pattern: pattern
+                wordList:
+                  isCaseSensitive: true
+                  values:
+                  - values
+                  - values
+        conditionSetUUID: conditionSetUUID
+      properties:
+        conditionSetUUID:
+          description: The UUID corresponding to the condition set with which you wish to scan the request payload.
+          type: string
+        conditionSet:
+          $ref: '#/components/schemas/ScanRequestV2_config_conditionSet'
+      type: object
     Confidence:
       description: The confidence level of a finding.
       enum:
@@ -708,6 +656,58 @@ components:
       - LIKELY
       - VERY_LIKELY
       type: string
+    ContextRule:
+      description: A context rule adjusts the finding confidence based on surrounding context.
+      example:
+        regex:
+          isCaseSensitive: true
+          pattern: pattern
+        proximity:
+          windowAfter: 1
+          windowBefore: 6
+        confidenceAdjustment: {}
+      properties:
+        regex:
+          $ref: '#/components/schemas/Regex'
+        proximity:
+          $ref: '#/components/schemas/ContextRule_proximity'
+        confidenceAdjustment:
+          $ref: '#/components/schemas/ContextRule_confidenceAdjustment'
+      type: object
+    ScanResponseV2:
+      properties:
+        fragment:
+          description: The text sample that was flagged.
+          type: string
+        detectorName:
+          description: The data type flagged in the text fragment.
+          type: string
+        confidence:
+          $ref: '#/components/schemas/Confidence'
+        location:
+          $ref: '#/components/schemas/ScanResponse_location'
+      type: object
+    ExclusionRule:
+      description: An exclusion rule removes findings that match the rule's given exlusion.
+      example:
+        regex:
+          isCaseSensitive: true
+          pattern: pattern
+        wordList:
+          isCaseSensitive: true
+          values:
+          - values
+          - values
+      properties:
+        matchType:
+          $ref: '#/components/schemas/MatchType'
+        exclusionType:
+          $ref: '#/components/schemas/ExclusionType'
+        regex:
+          $ref: '#/components/schemas/Regex'
+        wordList:
+          $ref: '#/components/schemas/WordList'
+      type: object
   securitySchemes:
     apiKeyAuth:
       in: header
