@@ -2,6 +2,9 @@ generated: '2026-10-13'
 method: searched
 checked:
 - https://aws.amazon.com/marketplace/
+- https://github.com/marketplace?type=actions
+- https://github.com/marketplace?type=apps
+- https://marketplace.atlassian.com/
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -20,3 +23,59 @@ edges:
   seller_name: Nightfall
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: GitHub Marketplace (apps)
+  partner: github
+  partner_match: aggregator
+  type: marketplace
+  marketplace: github-apps
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://github.com/marketplace/watchtower-radar
+  listing_count: 2
+  apps:
+  - 'Nightfall DLP: GitHub Secrets Scanner'
+  - 'Nightfall DLP: GitHub Secrets Scanner'
+  publisher_name: Nightfall AI
+  badges:
+  - Verified creator
+  - Verified domain
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: GitHub Marketplace (actions)
+  partner: github-actions
+  partner_match: aggregator
+  type: marketplace
+  marketplace: github-actions
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://github.com/marketplace/actions/nightfall-dlp-action
+  listing_count: 1
+  apps:
+  - Nightfall DLP Action
+  publisher_name: Nightfall AI
+  badges:
+  - Verified creator
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Atlassian Marketplace
+  partner: atlassian
+  partner_match: aggregator
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://marketplace.atlassian.com/vendors/1217783/nightfall
+  listing_count: 2
+  apps:
+  - Nightfall AI DLP for Confluence
+  - Nightfall AI DLP for Jira
+  publisher_name: Nightfall
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+source:
+- https://github.com/marketplace?type=actions
+- https://github.com/marketplace?type=apps
+- https://marketplace.atlassian.com/
