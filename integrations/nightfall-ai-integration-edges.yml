@@ -6,6 +6,7 @@ checked:
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
 - okta/integrations/okta-integration-edges.yml
+- slack/integrations/slack-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -98,6 +99,23 @@ edges:
   features:
   - API
   - CUSTOM_SOM
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/AF0GH46UX-nightfall-pro-dlp-for-slack
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - Nightfall Pro DLP for Slack
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
 source:
 - https://github.com/marketplace?type=actions
 - https://github.com/marketplace?type=apps
