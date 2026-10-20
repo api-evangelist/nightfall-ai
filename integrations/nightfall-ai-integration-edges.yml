@@ -7,6 +7,7 @@ checked:
 - https://marketplace.atlassian.com/
 - okta/integrations/okta-integration-edges.yml
 - slack/integrations/slack-integration-edges.yml
+- zendesk/integrations/zendesk-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -25,25 +26,6 @@ edges:
   seller_name: Nightfall
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
-- partner_name: GitHub Marketplace (apps)
-  partner: github
-  partner_match: aggregator
-  type: marketplace
-  marketplace: github-apps
-  channel: partner-built
-  relationship: platform-app
-  direction: third-party
-  evidence: https://github.com/marketplace/watchtower-radar
-  listing_count: 2
-  apps:
-  - 'Nightfall DLP: GitHub Secrets Scanner'
-  - 'Nightfall DLP: GitHub Secrets Scanner'
-  publisher_name: Nightfall AI
-  badges:
-  - Verified creator
-  - Verified domain
-  detected_by: sweep-devtools.py
-  detected: '2026-10-14'
 - partner_name: GitHub Marketplace (actions)
   partner: github-actions
   partner_match: aggregator
@@ -116,6 +98,23 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Slack app
+- partner_name: Zendesk (own)
+  partner: zendesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.zendesk.com/marketplace/apps/support/888434/nightfall-dlp/
+  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
+  apps:
+  - Nightfall DLP
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: AI and Bots
 source:
 - https://github.com/marketplace?type=actions
 - https://github.com/marketplace?type=apps

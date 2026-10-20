@@ -15,18 +15,6 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
-- slug: nightfall-ai-github-marketplace-apps
-  label: GitHub Marketplace (apps)
-  partner: github
-  partner_name: GitHub Marketplace (apps)
-  type: marketplace
-  marketplace: github-apps
-  channel: partner-built
-  evidence: https://github.com/marketplace/watchtower-radar
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: nightfall-ai-github-marketplace-actions
   label: GitHub Marketplace (actions)
   partner: github-actions
@@ -73,6 +61,19 @@
   marketplace: own
   channel: partner-built
   evidence: https://slack.com/marketplace/AF0GH46UX-nightfall-pro-dlp-for-slack
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: nightfall-ai-zendesk-own
+  label: Zendesk (own)
+  partner: zendesk
+  partner_name: Zendesk (own)
+  category: AI and Bots
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.zendesk.com/marketplace/apps/support/888434/nightfall-dlp/
   source: edge
   relationship: platform-app
   status: not-a-workflow
