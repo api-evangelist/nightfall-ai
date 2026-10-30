@@ -1,4 +1,4 @@
-# Nightfall AI (nightfall-ai)
+# Nightfall AI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,84 +66,122 @@
 
 Nightfall AI is a data security platform that specializes in identifying and protecting sensitive information within an organization. By utilizing machine learning technology, Nightfall AI can automatically scan files, emails, and messages to detect and classify sensitive data such as credit card numbers, social security numbers, and personal addresses.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/nightfall-ai/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/nightfall-ai/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Privacy · Sensitive Data
 
-## Scope
+## Nightfall AI on APIs.io
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Nightfall AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nightfall-ai/](https://apis.io/providers/nightfall-ai/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Artificial Intelligence
-- Privacy
-- Sensitive Data
+- [Nightfall AI Scan API](https://apis.io/apis/nightfall-ai/nightfall-ai-scan-api/) — The Scan API from Nightfall AI — 1 operation(s) for scan.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-07-02T00:00:00.000Z
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Nightfall AI
+Which operations an agent can call, which act, and which need a human in the loop.
 
-One unified platform for protecting sensitive data across SaaS, GenAI, email, and endpoints.
+- [Nightfall Ai Agentic Access](https://apis.io/agentic-access/nightfall-ai/nightfall-ai-agentic-access/)
 
-- **Human URL:** [https://www.nightfall.ai/](https://www.nightfall.ai/)
+#### Collections (3)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Artificial Intelligence
-- Scan
+- [Nightfall AI](https://apis.io/collections/nightfall-ai/open-nightfall-ai/)
+- [Nightfall AI Scan API](https://apis.io/collections/nightfall-ai/open-nightfall-ai-scan-api/)
+- [Nightfall AI Scan Scans API](https://apis.io/collections/nightfall-ai/open-nightfall-ai-scans-api/)
 
-#### Properties
+#### Security (4)
 
-- [OpenAPI](openapi/nightfall-ai-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/nightfall-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/nightfall-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Nightfall Ai Authentication](https://apis.io/security/nightfall-ai/nightfall-ai-authentication/)
+- [Nightfall Ai Domain Security](https://apis.io/security/nightfall-ai/nightfall-ai-domain-security/)
+- [Nightfall Ai Trust Center](https://apis.io/security/nightfall-ai/nightfall-ai-trust-center/)
+- [Nightfall Ai Vulnerability Disclosure](https://apis.io/security/nightfall-ai/nightfall-ai-vulnerability-disclosure/)
 
-- [GitHub Organization](https://github.com/nightfallai)
-- [LinkedIn](https://www.linkedin.com/company/nightfall-ai)
-- [Getting Started](https://help.nightfall.ai/firewall-for-ai/introduction/quickstart)
-- [Use Cases](https://help.nightfall.ai/firewall-for-ai/introduction/use-cases)
-- [Authentication](
-https://help.nightfall.ai/firewall-for-ai/introduction/authentication-and-security)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Nightfall Ai Plans Pricing](https://apis.io/plans/nightfall-ai/nightfall-ai-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Nightfall Ai Rate Limits](https://apis.io/rate-limits/nightfall-ai/nightfall-ai-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Nightfall Ai Finops](https://apis.io/finops/nightfall-ai/nightfall-ai-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.nightfall.ai/)
+- [Getting started](https://help.nightfall.ai/firewall-for-ai/introduction/quickstart)
 - [Pricing](https://help.nightfall.ai/firewall-for-ai/introduction/pricing)
-- [Errors](https://help.nightfall.ai/firewall-for-ai/key-concepts/errors)
-- [S D Ks](
-https://help.nightfall.ai/firewall-for-ai/nightfall-software-development-kit-sdk/nightfall-sdks)
-- [F A Q](https://help.nightfall.ai/firewall-for-ai/faqs)
-- [Sign Up](
-https://auth.nightfall.ai/login?state=hKFo2SBZVWhXZU50OHN6MkQ4aVRMcHgwMVVBQ3A4ZjYwYzVKcKFupWxvZ2luo3RpZNkgUXktZzBrbExsU0Z1SnozR2R2MWdKRE5fTElpV1dUb1CjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=r_2LyEabd0pmGjzB8Qc8Ne75dfNCCthB&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D)
-- [Terms of Service](https://www.nightfall.ai/terms)
-- [Privacy Policy](https://www.nightfall.ai/privacy)
 - [Blog](https://www.nightfall.ai/blog)
-- [Guide](https://www.nightfall.ai/guides)
-- [Partners](https://www.nightfall.ai/partners)
-- [Login](https://auth.nightfall.ai/login)
-- [Getting Started](https://help.nightfall.ai/firewall-for-ai/introduction/quickstart)
-- [Use Cases](https://help.nightfall.ai/firewall-for-ai/introduction/use-cases)
-- [Authentication](
-https://help.nightfall.ai/firewall-for-ai/introduction/authentication-and-security)
-- [Pricing](https://help.nightfall.ai/firewall-for-ai/introduction/pricing)
-- [Errors](https://help.nightfall.ai/firewall-for-ai/key-concepts/errors)
-- [S D Ks](
-https://help.nightfall.ai/firewall-for-ai/nightfall-software-development-kit-sdk/nightfall-sdks)
-- [F A Q](https://help.nightfall.ai/firewall-for-ai/faqs)
-- [Sign Up](
-https://auth.nightfall.ai/login?state=hKFo2SBZVWhXZU50OHN6MkQ4aVRMcHgwMVVBQ3A4ZjYwYzVKcKFupWxvZ2luo3RpZNkgUXktZzBrbExsU0Z1SnozR2R2MWdKRE5fTElpV1dUb1CjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=r_2LyEabd0pmGjzB8Qc8Ne75dfNCCthB&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D)
-- [Terms of Service](https://www.nightfall.ai/terms)
-- [Privacy Policy](https://www.nightfall.ai/privacy)
-- [Blog](https://www.nightfall.ai/blog)
-- [Guide](https://www.nightfall.ai/guides)
-- [Partners](https://www.nightfall.ai/partners)
-- [Login](
-https://auth.nightfall.ai/login?state=hKFo2SBMeEttUHRKV0ZlU2xNQlhOZzdCS2p6MVZ4VDhBRVJyT6FupWxvZ2luo3RpZNkgcndRclA2bXNZbWFIZV9Pa3pTNUFiSzdVYnotTW5ibGqjY2lk2SBwdVFNaGtoMUNzMnJyYjJOS05FSzZERzRPVThvMlloag&client=puQMhkh1Cs2rrb2NKNEK6DG4OU8o2Yhj&protocol=oauth2&response_type=token%20id_token&redirect_uri=https%3A%2F%2Fapp.nightfall.ai%2Fauthenticate&scope=openid%20profile%20email&audience=https%3A%2F%2Fapi.watchtower.ai%2F&nonce=ZhCQOut2VDDBFN1hyjHNP7CDlD0XNM4&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xMy4yIn0%3D)
+- [Terms of service](https://www.nightfall.ai/terms)
+- [Privacy policy](https://www.nightfall.ai/privacy)
+- [GitHub](https://github.com/nightfallai)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 36.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 47.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 60.5 |
+
+**Agent readiness 20.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 28.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nightfall-ai/](https://apis.io/providers/nightfall-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Nightfall AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nightfall-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
